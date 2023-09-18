@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -91,10 +92,10 @@
 
         programming {
             bindings = <
-&none  &sys_reset  &none        &none          &none    &none    &none           &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)  &none
-&none  &tog 4      &kp PAGE_UP  &kp PAGE_DOWN  &kp END  &none    &kp LEFT_ARROW  &kp UP_ARROW          &kp DOWN_ARROW         &kp RIGHT_ARROW   &none             &none
-&none  &none       &none        &none          &none    &none    &none           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LS(COMMA)     &kp LS(PERIOD)    &none
-                                &none          &none    &none    &kp BACKSPACE   &kp SPACE             &kp ENTER
+&none  &sys_reset  &bt BT_NXT   &bt BT_PRV     &bt BT_CLR  &none    &none           &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)  &none
+&none  &tog 4      &kp PAGE_UP  &kp PAGE_DOWN  &kp END     &none    &kp LEFT_ARROW  &kp UP_ARROW          &kp DOWN_ARROW         &kp RIGHT_ARROW   &none             &none
+&none  &none       &none        &none          &none       &none    &none           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LS(COMMA)     &kp LS(PERIOD)    &none
+                                &none          &none       &none    &kp BACKSPACE   &kp SPACE             &kp ENTER
             >;
         };
 
