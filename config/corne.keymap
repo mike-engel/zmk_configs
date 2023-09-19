@@ -52,10 +52,10 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             flavor = "tap-unless-interrupted";
             quick-tap-ms = <100>;
-            hold-trigger-key-positions = <6 18 30 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 39 40 41 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-key-positions = <6 18 30 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 39 40 41 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 36 37 38>;
             hold-trigger-on-release;
         };
         right_hand_positional_hold_tap: right_hand_positional_hold_tap {
@@ -66,10 +66,10 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <100>;
             flavor = "tap-unless-interrupted";
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
             hold-trigger-on-release;
         };
     };
@@ -95,7 +95,7 @@
         programming {
             bindings = <
 &none  &sys_reset  &bt BT_NXT   &bt BT_PRV     &bt BT_CLR  &none    &none           &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)  &none
-&none  &tog 4      &kp PAGE_UP  &kp PAGE_DOWN  &kp END     &none    &kp LEFT_ARROW  &kp UP_ARROW          &kp DOWN_ARROW         &kp RIGHT_ARROW   &none             &none
+&none  &tog 4      &kp PAGE_UP  &kp PAGE_DOWN  &kp END     &none    &kp LEFT_ARROW  &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW   &none             &none
 &none  &none       &none        &none          &none       &none    &none           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LS(COMMA)     &kp LS(PERIOD)    &none
                                 &none          &none       &none    &kp BACKSPACE   &kp SPACE             &kp ENTER
             >;
