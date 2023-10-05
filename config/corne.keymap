@@ -19,37 +19,37 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <1 10>;
-            layers = <0 4>;
+            layers = <0 2>;
         };
 
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <13 22>;
-            layers = <0 4>;
+            layers = <0 2>;
         };
 
         caps_word {
             bindings = <&caps_word>;
             key-positions = <25 34>;
-            layers = <0 4>;
+            layers = <0 2>;
         };
 
         minus {
             bindings = <&kp MINUS>;
             key-positions = <4 7>;
-            layers = <0 4>;
+            layers = <0 2>;
         };
 
         underscore {
             bindings = <&kp LS(MINUS)>;
             key-positions = <28 31>;
-            layers = <0 4>;
+            layers = <0 2>;
         };
 
         toggle_tarmak {
-            bindings = <&tog 5>;
+            bindings = <&tog 1>;
             key-positions = <38 39>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
     };
 
@@ -57,9 +57,7 @@
         left_hand_positional_hold_tap: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HAND_POSITIONAL_HOLD_TAP";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -71,9 +69,7 @@
         right_hand_positional_hold_tap: right_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HAND_POSITIONAL_HOLD_TAP";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -98,17 +94,43 @@
 &none  &kp Q                                          &kp W                                      &kp E                                      &kp R                                        &kp T                                                    &kp Y                                                    &kp U                                          &kp I                                        &kp O                                        &kp P                                                    &none
 &none  &left_hand_positional_hold_tap LEFT_CONTROL A  &left_hand_positional_hold_tap LEFT_ALT S  &left_hand_positional_hold_tap LEFT_GUI D  &left_hand_positional_hold_tap LEFT_SHIFT F  &left_hand_positional_hold_tap LS(LA(LC(LEFT_GUI))) G    &right_hand_positional_hold_tap RS(RA(RC(RIGHT_GUI))) H  &right_hand_positional_hold_tap RIGHT_SHIFT J  &right_hand_positional_hold_tap RIGHT_GUI K  &right_hand_positional_hold_tap RIGHT_ALT L  &right_hand_positional_hold_tap RIGHT_CONTROL SEMICOLON  &none
 &none  &kp Z                                          &kp X                                      &kp C                                      &kp V                                        &kp B                                                    &kp N                                                    &kp M                                          &kp COMMA                                    &kp DOT                                      &kp FSLH                                                 &none
-                                                                                                 &kp TAB                                    &mo 2                                        &mo 1                                                    &lt 3 BACKSPACE                                          &kp SPACE                                      &kp ENTER
+                                                                                                 &kp TAB                                    &mo 4                                        &mo 3                                                    &lt 5 BACKSPACE                                          &kp SPACE                                      &kp ENTER
             >;
+
+            label = "HOM";
+        };
+
+        tarmak {
+            bindings = <
+&trans  &kp Q                                          &kp W                                      &kp J                                       &kp R                                        &kp T                                                     &kp Y                                                     &kp U                                          &kp I                                         &kp O                                        &kp P                                                    &trans
+&trans  &left_hand_positional_hold_tap LEFT_CONTROL A  &left_hand_positional_hold_tap LEFT_ALT S  &left_hand_positional_hold_tap LEFT_META D  &left_hand_positional_hold_tap LEFT_SHIFT F  &left_hand_positional_hold_tap LS(LA(LC(LEFT_META))) G    &right_hand_positional_hold_tap RS(RA(RC(RIGHT_META))) M  &right_hand_positional_hold_tap RIGHT_SHIFT N  &right_hand_positional_hold_tap RIGHT_META E  &right_hand_positional_hold_tap RIGHT_ALT L  &right_hand_positional_hold_tap RIGHT_CONTROL SEMICOLON  &trans
+&trans  &kp Z                                          &kp X                                      &kp C                                       &kp V                                        &kp B                                                     &kp K                                                     &kp H                                          &kp COMMA                                     &kp DOT                                      &kp FSLH                                                 &trans
+                                                                                                  &kp TAB                                     &mo 4                                        &mo 3                                                     &lt 5 BACKSPACE                                           &kp SPACE                                      &kp ENTER
+            >;
+
+            label = "TMK";
+        };
+
+        gaming {
+            bindings = <
+&none  &kp Q  &kp W  &kp E    &kp R  &kp T    &kp Y            &kp U      &kp I      &kp O    &kp P     &none
+&none  &kp A  &kp S  &kp D    &kp F  &kp G    &kp H            &kp J      &kp K      &kp L    &kp SEMI  &none
+&none  &kp Z  &kp X  &kp C    &kp V  &kp B    &kp N            &kp M      &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &kp TAB  &mo 4  &mo 3    &lt 5 BACKSPACE  &kp SPACE  &kp ENTER
+            >;
+
+            label = "GMG";
         };
 
         programming {
             bindings = <
 &none  &kp LG(GRAVE)  &bt BT_NXT  &bt BT_PRV   &bt BT_CLR     &kp LA(MINUS)    &kp LS(LA(MINUS))  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)  &none
-&none  &tog 4         &kp HOME    &kp PAGE_UP  &kp PAGE_DOWN  &kp END          &kp LEFT_ARROW     &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW   &none             &none
+&none  &tog 2         &kp HOME    &kp PAGE_UP  &kp PAGE_DOWN  &kp END          &kp LEFT_ARROW     &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT_ARROW   &none             &none
 &none  &bootloader    &none       &none        &none          &none            &none              &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LS(COMMA)     &kp LS(PERIOD)    &none
                                   &none        &none          &none            &kp BACKSPACE      &kp SPACE             &kp ENTER
             >;
+
+            label = "PRG";
         };
 
         numbers {
@@ -118,6 +140,8 @@
 &none  &none  &none  &none  &none  &none    &kp N0         &kp N1     &kp N2     &kp N3  &kp EQUAL         &none
                      &none  &none  &none    &kp BACKSPACE  &kp SPACE  &kp ENTER
             >;
+
+            label = "NUM";
         };
 
         symbols {
@@ -127,24 +151,8 @@
 &none  &kp LS(GRAVE)         &kp LS(NUMBER_3)  &kp LS(NUMBER_2)  &kp LS(NUMBER_1)  &kp LS(BACKSLASH)    &none  &none  &none  &none  &none  &none
                                                &kp TAB           &none             &none                &none  &none  &none
             >;
-        };
 
-        gaming {
-            bindings = <
-&none  &kp Q  &kp W  &kp E    &kp R  &kp T    &kp Y            &kp U      &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D    &kp F  &kp G    &kp H            &kp J      &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C    &kp V  &kp B    &kp N            &kp M      &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &kp TAB  &mo 2  &mo 1    &lt 3 BACKSPACE  &kp SPACE  &kp ENTER
-            >;
-        };
-
-        tarmak {
-            bindings = <
-&trans  &kp Q                                          &kp W                                      &kp J                                       &kp R                                        &kp T                                                     &kp Y                                                     &kp U                                          &kp I                                         &kp O                                        &kp P                                                    &trans
-&trans  &left_hand_positional_hold_tap LEFT_CONTROL A  &left_hand_positional_hold_tap LEFT_ALT S  &left_hand_positional_hold_tap LEFT_META D  &left_hand_positional_hold_tap LEFT_SHIFT F  &left_hand_positional_hold_tap LS(LA(LC(LEFT_META))) G    &right_hand_positional_hold_tap RS(RA(RC(RIGHT_META))) M  &right_hand_positional_hold_tap RIGHT_SHIFT N  &right_hand_positional_hold_tap RIGHT_META E  &right_hand_positional_hold_tap RIGHT_ALT L  &right_hand_positional_hold_tap RIGHT_CONTROL SEMICOLON  &trans
-&trans  &kp Z                                          &kp X                                      &kp C                                       &kp V                                        &kp B                                                     &kp K                                                     &kp H                                          &kp COMMA                                     &kp DOT                                      &kp FSLH                                                 &trans
-                                                                                                  &kp TAB                                     &mo 2                                        &mo 1                                                     &lt 3 BACKSPACE                                           &kp SPACE                                      &kp ENTER
-            >;
+            label = "SYM";
         };
     };
 };
