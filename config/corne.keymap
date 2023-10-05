@@ -19,31 +19,31 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <1 10>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <13 22>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         caps_word {
             bindings = <&caps_word>;
             key-positions = <25 34>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         minus {
             bindings = <&kp MINUS>;
             key-positions = <4 7>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         underscore {
             bindings = <&kp LS(MINUS)>;
             key-positions = <28 31>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         toggle_tarmak {
